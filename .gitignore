@@ -1,0 +1,6 @@
+iptv_project.zip
+.idea/
+.pytest_cache/
+__pycache__/
+local.profile.*
+staticfiles

@@ -1,0 +1,373 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>IPService</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+
+    <!-- Favicons -->
+    <!--    <link href="{% static 'assets/img/favicon.png' %}" rel="icon">-->
+    <link href="{% static 'assets/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+          rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="{% static 'assets/vendor/aos/aos.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link href="{% static 'assets/css/style.css' %}" rel="stylesheet">
+    <link rel="icon" href="{% static 'assets/img/aqtv.png' %}" type="image/png">
+
+    <!-- =======================================================
+    * Template Name: Techie
+    * Updated: Mar 10 2023 with Bootstrap v5.2.3
+    * Template URL: https://bootstrapmade.com/techie-free-skin-bootstrap-3/
+    * Author: BootstrapMade.com
+    * License: https://bootstrapmade.com/license/
+    ======================================================== -->
+
+    <!-- Meta Pixel Code -->
+    <script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '225465136742514');
+fbq('track', 'PageView');
+
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+                   src="https://www.facebook.com/tr?id=225465136742514&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
+</head>
+
+<body>
+
+<!-- ======= Header ======= -->
+<header id="header" class="fixed-top ">
+    <div class="container d-flex align-items-center justify-content-between">
+        <h1 class="logo"><a href="index.html">IPService</a></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+        <nav id="navbar" class="navbar">
+            <ul>
+                <li><a class="nav-link scrollto active" href="#hero">Главная</a></li>
+                <!--                <li><a class="nav-link scrollto" href="#about">ჩვენს შესახებ</a></li>-->
+                <li><a class="nav-link scrollto" href="#pricing">Тарифы</a></li>
+                <li><a class="nav-link scrollto " href="#contact">Контакты</a></li>
+                <li><a class="nav-link scrollto" href="#faq">Часто задаваемые вопросы</a></li>
+            </ul>
+            <i class="bi bi-list mobile-nav-toggle"></i>
+        </nav><!-- .navbar -->
+
+    </div>
+</header><!-- End Header -->
+
+<!-- ======= Hero Section ======= -->
+<section id="hero" class="d-flex align-items-center">
+
+    <div class="container-fluid" data-aos="fade-up">
+        <div class="row justify-content-center">
+            <div class="col-xl-5 col-lg-6 pt-3 pt-lg-0 order-1 order-lg-1 d-flex flex-column justify-content-center">
+                <h1>3000+ каналов <br> за 2000 тенге в месяц</h1>
+                <h2>Мы поможем вам подключить огромное кол-во каналов за мизерную цену.</h2>
+                <form action="" method="POST" class="row g-3 needs-validation" novalidate>
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <p style="font-size: 10px">Нажимая на кнопку отправить я соглашаюсь с тем что данные которые я ввел(а) могут быть обработаны третьими лицами</p>
+                    <button type="submit" class="btn btn-danger"> Отправить</button>
+                </form>
+            </div>
+            <div class="col-xl-4 col-lg-6 order-2 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="150">
+
+<!--                <img src="{% static 'assets/img/hero-img.png' %}" class="img-fluid animated" alt="">-->
+
+            </div>
+        </div>
+    </div>
+
+</section><!-- End Hero -->
+
+<main id="main">
+
+    <!-- ======= Pricing Section ======= -->
+    <section id="pricing" class="pricing section-bg">
+        <div class="container" data-aos="fade-up">
+
+            <div class="section-title">
+                <h2>Пакеты</h2>
+                <p>Стоимость подключения сервиса</p>
+            </div>
+
+            <div class="row justify-content-center">
+
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="box featured">
+                        <h3>Стандарт</h3>
+                        <h4><sup>&#x20b8;</sup>4499<span> / 1 мес</span></h4>
+                        <ul>
+                            <li>3000+ каналов</li>
+                            <li>600+ HD каналов</li>
+                            <li>400+ спортивные</li>
+                            <!--                            <li class="na">Pharetra massa</li>-->
+                            <!--                            <li class="na">Massa ultricies mi</li>-->
+                        </ul>
+                        <div class="btn-wrap">
+                            <a href="#" class="btn-buy">Buy Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="box featured">
+                        <h3>Стандарт +</h3>
+                        <h4><sup>&#x20b8;</sup>9900<span> / 3 мес</span></h4>
+                        <ul>
+                            <li>3000+ каналов</li>
+                            <li>600+ HD каналов</li>
+                            <li>400+ спортивные</li>
+                            <!--                            <li class="na">Pharetra massa</li>-->
+                            <!--                            <li class="na">Massa ultricies mi</li>-->
+                        </ul>
+                        <div class="btn-wrap">
+                            <a href="#" class="btn-buy">Buy Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="box featured">
+                        <h3>Стандарт</h3>
+                        <h4><sup>&#x20b8;</sup>17800<span> / 6 мес</span></h4>
+                        <ul>
+                            <li>3000+ каналов</li>
+                            <li>600+ HD каналов</li>
+                            <li>400+ спортивные</li>
+                            <!--                            <li class="na">Pharetra massa</li>-->
+                            <!--                            <li class="na">Massa ultricies mi</li>-->
+                        </ul>
+                        <div class="btn-wrap">
+                            <a href="#" class="btn-buy">Buy Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!--                <div class="col-lg-3 col-md-6 mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="400">-->
+                <!--                    <div class="box">-->
+                <!--                        <span class="advanced">დამატებითი</span>-->
+                <!--                        <h3>ექსტრა</h3>-->
+                <!--                        <h4><sup>₾</sup>10<span> / 1 თვე</span></h4>-->
+                <!--                        <ul>-->
+                <!--                            <li>დამატებითი</li>-->
+                <!--                            <li>500 "18+" არხი</li>-->
+                <!--                            <li>თქვენ პაკეტს</li>-->
+                <!--                        </ul>-->
+                <!--                        <div class="btn-wrap">-->
+                <!--                            <a href="#" class="btn-buy">Buy Now</a>-->
+                <!--                        </div>-->
+                <!--                    </div>-->
+                <!--                </div>-->
+
+            </div>
+
+        </div>
+    </section><!-- End Pricing Section -->
+    <!-- ======= Frequently Asked Questions Section ======= -->
+    <section id="faq" class="faq">
+        <div class="container" data-aos="fade-up">
+
+            <div class="section-title">
+                <h2>Часто задаваемые вопросы:</h2>
+            </div>
+
+            <div class="faq-list">
+                <ul>
+                    <li data-aos="fade-up" data-aos="fade-up" data-aos-delay="100">
+                        <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" class="collapse"
+                                                                       data-bs-target="#faq-list-1">Что нужно для того что-бы воспользоваться сервисом?<i class="bx bx-chevron-down icon-show"></i><i
+                                class="bx bx-chevron-up icon-close"></i></a>
+                        <div id="faq-list-1" class="collapse show" data-bs-parent=".faq-list">
+                            <p>
+                                — Для того что-бы воспользоваться сервисом вам нужно Android устройство или Smart TV и стабильное подключение к интернету минимум 20мб/cек
+                            </p>
+                        </div>
+                    </li>
+
+                    <li data-aos="fade-up" data-aos-delay="200">
+                        <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse"
+                                                                       data-bs-target="#faq-list-2" class="collapsed">Стоимость подключения сервиса и способы оплаты услуг ?<i class="bx bx-chevron-down icon-show"></i><i
+                                class="bx bx-chevron-up icon-close"></i></a>
+                        <div id="faq-list-2" class="collapse" data-bs-parent=".faq-list">
+                            <p>
+                                — Стоимость подключения зависит от выбранного вами пакета услуг и вашего местоположения. Мы предлагаем различные пакеты услуг, чтобы удовлетворить разные потребности наших клиентов. Цена включает в себя подключение и техническую поддержку. При выборе пакета вы сможете увидеть точную стоимость для вашего региона. <br>
+                                — Оплата услуг происходит по QR-коду, предоставленному ниже. Если вы не можете осуществить оплату через QR-код, мы также предоставили ссылку для вашего удобства, по которой вы можете перейти и произвести оплату
+                                — Мы принимаем оплату в грузинских лари (GEL), так как мы являемся грузинской компанией. В случае использования карты, выпущенной в другой стране, сумма платежа будет автоматически конвертирована в нашу валюту по текущему обменному курсу. Это позволяет нам принимать платежи от клиентов со всего мира без необходимости открывать отдельные валютные счета. Ваш банк осуществляет конвертацию, и вы можете быть уверены, что оплата будет снята с вашего счета в вашей местной валюте.
+                            </p>
+                            <hr>
+                            <div class="d-flex justify-content-around">
+                                <div class="row d-flex justify-content-around">
+                                    <div class="col">
+                                       <div class="qr-code">
+                                            <b>Оплата по QR-код:</b>
+                                            <img src="{% static 'assets/img/qr-code.png' %}">
+                                        <b>Получатель: IPService Group</b>
+                                       </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="qr-code">
+                                            <b>Оплата по ссылке:
+                                            <a target="_blank" href="https://keepz.me/tipping?toUserId=f8ebb015-6232-4ec9-8327-a50f0b7480e2&lng=en">keepm.ze</a>
+                                        </b>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <p>
+                                — Портал <a target="_blank" href="https://keepz.me/" class="m_res">keepz.me</a> является полностью безопасным для осуществления платежей. Они сотрудничают с ведущими платформами, такими как App Store и Google Play, а также с банками по всему миру. Это означает, что системы <a target="_blank" href="https://keepz.me/" class="m_res">keepz.me</a> соответствуют высоким стандартам безопасности, принятым в этих платформах и банковской индустрии. Они принимают меры для защиты ваших данных и обеспечения безопасной транзакции при использовании портала <a target="_blank" href="https://keepz.me/" class="m_res">keepz.me</a>. Вы можете быть уверены, что ваша информация и платежи обрабатываются надежно и конфиденциально.</p>
+
+                        </div>
+                    </li>
+
+                    <li data-aos="fade-up" data-aos-delay="300">
+                        <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse"
+                                                                       data-bs-target="#faq-list-3" class="collapsed">Какое качество трансляции? Есть ли функция прокрутки?<i
+                                class="bx bx-chevron-down icon-show"></i><i
+                                class="bx bx-chevron-up icon-close"></i></a>
+                        <div id="faq-list-3" class="collapse" data-bs-parent=".faq-list">
+                            <p>
+                                — IPTV предлагает трансляции в разных качествах: SD, HD, FULL HD и 4K. Выберите оптимальное качество в зависимости от ваших предпочтений и выбранного вами канала.
+                                <br>
+                                — Кроме того, IPTV также предоставляет функцию прокрутки на некоторых каналах, которая позволяет вам перейти к определенному моменту вещания, чтобы не пропустить интересующую вас часть программы или фильма. <br>
+                            </p>
+                        </div>
+                    </li>
+
+
+                </ul>
+            </div>
+
+        </div>
+    </section><!-- End Frequently Asked Questions Section -->
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact section-bg">
+        <div class="container" data-aos="fade-up">
+
+            <div class="section-title">
+                <h2>Контакты</h2>
+                <p>Если у вас возникнут вопросы, пожалуйста, свяжитесь с нами с помощью WhatsApp, Viber или Telegram по указанному ниже номеру для связи.</p>
+            </div>
+
+            <div class="row">
+
+            </div>
+
+            <div class="row justify-content-center">
+
+                <div class="row d-flex justify-content-center">
+                    <div class="col-lg-3 col-md-6">
+                        <a href="mailto:ipservice2023@gmail.com">
+                            <div class="info-box  mb-4">
+                                <i class="bx bx-envelope"></i>
+                                <p>ipservice2023@gmail.com</p>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6">
+                        <a href="https://t.me/571591495">
+                            <div class="info-box  mb-4">
+                                <i class="bi bi-telegram"></i>
+                                <p>+995 571 591 495</p>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6">
+
+                        <a href="tel:+995571591495">
+                            <div class="info-box  mb-4">
+                                <i class="bi bi-whatsapp"></i>
+                                <p>+995 571 591 495</p>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6">
+                        <a href="https://www.instagram.com/aqtivi2022/">
+                            <div class="info-box  mb-4">
+                                <i class="bx bxl-instagram"></i>
+                                <p>Instagram</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section><!-- End Contact Section -->
+
+</main><!-- End #main -->
+
+<!-- ======= Footer ======= -->
+<footer id="footer">
+
+    <div class="container">
+
+        <div class="copyright-wrap d-md-flex py-4">
+            <div class="me-md-auto text-center text-md-start">
+                <div class="copyright">
+                    &copy; Copyright <strong><span>IPService</span></strong>. All Rights Reserved
+                </div>
+                <div class="credits">
+                    <!-- All the links in the footer should remain intact. -->
+                    <!-- You can delete the links only if you purchased the pro version. -->
+                    <!-- Licensing information: https://bootstrapmade.com/license/ -->
+                    <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/techie-free-skin-bootstrap-3/ -->
+                    <!--                    Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>-->
+                </div>
+            </div>
+        </div>
+
+    </div>
+</footer><!-- End Footer -->
+
+<a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+        class="bi bi-arrow-up-short"></i></a>
+<div id="preloader"></div>
+
+<!-- Vendor JS Files -->
+<script src="{% static 'assets/vendor/purecounter/purecounter_vanilla.js' %}"></script>
+<script src="{% static 'assets/vendor/aos/aos.js' %}"></script>
+<script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+<script src="{% static 'assets/vendor/glightbox/js/glightbox.min.js' %}"></script>
+<script src="{% static 'assets/vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+<script src="{% static 'assets/vendor/swiper/swiper-bundle.min.js' %}"></script>
+<script src="{% static 'assets/vendor/php-email-form/validate.js' %}"></script>
+
+<!-- Template Main JS File -->
+<script src="{% static 'assets/js/main.js' %}"></script>
+
+</body>
+
+</html>
