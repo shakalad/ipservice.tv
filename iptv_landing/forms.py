@@ -43,7 +43,7 @@ class ApplicationFormKZ(forms.ModelForm):
         fields = ['name_surname', 'phone_number', 'town']
         widgets = {
             'name_surname': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Имя Фамилия'}),
-            'phone_number': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Номер телефоеа'}),
+            'phone_number': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Номер телефона'}),
             'town': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Город'}),
         }
 

@@ -4,3 +4,4 @@ iptv_project.zip
 __pycache__/
 local.profile.*
 staticfiles
+*.zip
